@@ -1,33 +1,33 @@
-# TOPSIS Web Service
+# TOPSIS Web Application
 
-A web-based implementation of TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) algorithm for multi-criteria decision analysis.
+A web application implementing the TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) algorithm for multi-criteria decision analysis.
 
 ## Features
 
-- Upload CSV or Excel (.xlsx) files
-- Automatic TOPSIS calculation
-- Results preview in browser
-- Email results to user
-- Download results as CSV
-- Input validation (weights, impacts, email)
-- Modern, responsive UI
-- Deployable to Vercel
+- Upload CSV or Excel (.xlsx) files containing decision matrices
+- Automated computation of TOPSIS scores and rankings
+- Interactive preview of results in the browser
+- Email delivery of analysis results
+- Download results in CSV format
+- Comprehensive input validation for weights, impacts, and email
+- Responsive, modern user interface
+- Easy deployment to Vercel
 
 ## Setup Instructions
 
 ### 1. EmailJS Configuration
 
-To enable email functionality, you need to set up EmailJS:
+To enable the email functionality, configure EmailJS as follows:
 
-1. Go to [EmailJS](https://www.emailjs.com/) and create a free account
-2. Add an email service (Gmail, Outlook, etc.)
-3. Create an email template with the following template variables:
-   - `{{to_email}}` - Recipient email
+1. Visit [EmailJS](https://www.emailjs.com/) and create a free account
+2. Add an email service (such as Gmail or Outlook)
+3. Create an email template with the following variables:
+   - `{{to_email}}` - Recipient's email address
    - `{{file_name}}` - Original filename
    - `{{results}}` - TOPSIS results preview
 
-4. Get your credentials:
-   - **Public Key**: Found in Account > API Keys
+4. Obtain your credentials:
+   - **Public Key**: Located in Account > API Keys
    - **Service ID**: Found in Email Services
    - **Template ID**: Found in Email Templates
 
@@ -42,8 +42,10 @@ To enable email functionality, you need to set up EmailJS:
 
 ### 2. Local Testing
 
-1. Open `index.html` in a web browser
-2. Or use a local server:
+To test the application locally:
+
+1. Open `index.html` directly in a web browser
+2. Alternatively, use a local server:
    ```bash
    # Using Python
    python -m http.server 8000
@@ -54,45 +56,47 @@ To enable email functionality, you need to set up EmailJS:
 
 ### 3. Deploy to Vercel
 
-1. Install Vercel CLI:
+To deploy the application on Vercel:
+
+1. Install the Vercel CLI:
    ```bash
    npm install -g vercel
    ```
 
-2. Navigate to project directory:
+2. Navigate to the project directory:
    ```bash
-   cd topsis-website
+   cd Topsis-Part3
    ```
 
-3. Deploy:
+3. Deploy the application:
    ```bash
    vercel
    ```
 
-4. Follow the prompts to complete deployment
+4. Follow the on-screen prompts to complete the deployment
 
-## Usage
+## How to Use
 
 1. **Upload File**: Select a CSV or XLSX file
-   - First column: Identifier (name, ID, etc.)
-   - Remaining columns: Numeric criteria values
+   - The first column should contain identifiers (names, IDs, etc.)
+   - Subsequent columns should contain numeric criteria values
 
-2. **Enter Weights**: Comma-separated numbers
+2. **Enter Weights**: Provide comma-separated numeric values
    - Example: `1,1,1,2`
-   - Must match number of criteria columns
+   - The number must match the number of criteria columns
 
-3. **Enter Impacts**: Comma-separated + or -
-   - `+` for beneficial criteria (higher is better)
-   - `-` for non-beneficial criteria (lower is better)
+3. **Enter Impacts**: Provide comma-separated `+` or `-` symbols
+   - `+` for beneficial criteria (higher values are better)
+   - `-` for non-beneficial criteria (lower values are better)
    - Example: `+,+,-,+`
 
-4. **Enter Email**: Valid email address to receive results
+4. **Enter Email**: Provide a valid email address to receive the results
 
 5. **Submit**: Click "Analyze & Send Results"
 
-6. **View Results**: Preview results in browser and check email
+6. **View Results**: Preview the results in the browser and check your email
 
-7. **Download**: Click "Download Results" to save CSV file
+7. **Download**: Click "Download Results" to save the CSV file
 
 ## Input File Format
 
@@ -133,21 +137,23 @@ M5,225,16,16,2
 ## File Structure
 
 ```
-topsis-website/
+Topsis-Part3/
 ├── index.html          # Main HTML page
-├── styles.css          # Styling
-├── app.js             # TOPSIS logic & email functionality
-└── README.md          # Documentation
+├── styles.css          # Styling and animations
+├── app.js              # TOPSIS algorithm and email functionality
+├── sample-data.csv     # Sample input data
+├── vercel.json         # Vercel deployment configuration
+└── README copy.md      # Documentation
 ```
 
-## Algorithm Steps
+## TOPSIS Algorithm Overview
 
-1. **Normalization**: Vector normalization of decision matrix
-2. **Weighted Matrix**: Multiply normalized values by weights
-3. **Ideal Solutions**: Calculate ideal best and worst values
-4. **Distance Calculation**: Euclidean distance from ideal solutions
-5. **TOPSIS Score**: Relative closeness to ideal solution
-6. **Ranking**: Rank alternatives based on scores
+1. **Normalization**: Normalize the decision matrix using vector normalization
+2. **Weighted Matrix**: Multiply normalized values by their respective weights
+3. **Ideal Solutions**: Determine the ideal best and worst solutions
+4. **Distance Calculation**: Compute Euclidean distances from ideal solutions
+5. **TOPSIS Score**: Calculate relative closeness to the ideal solution
+6. **Ranking**: Rank alternatives based on their TOPSIS scores
 
 ## Troubleshooting
 
@@ -173,4 +179,4 @@ MIT License - Free to use and modify
 
 ## Support
 
-For issues or questions, please create an issue in the repository.
+For any issues or questions, please create an issue in the repository.
