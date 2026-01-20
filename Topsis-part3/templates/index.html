@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TOPSIS Web Service</title>
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #cccccc;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #888888;
+            margin-top: -15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>TOPSIS Web Service</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <label>Upload CSV/Excel File:</label>
+            <input type="file" name="file" accept=".csv, .xls, .xlsx" required>
+            <div class="note">Accepted formats: .csv, .xls, .xlsx</div>
+
+            <label>Weights (comma separated):</label>
+            <input type="text" name="weights" placeholder="e.g., 1,2,3,4" required>
+
+            <label>Impacts (comma separated):</label>
+            <input type="text" name="impacts" placeholder="e.g., +,+,-,+" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="yourname@example.com" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
