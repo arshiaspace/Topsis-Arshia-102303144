@@ -36,7 +36,6 @@ python topsis.py data.csv "1,1,1,2" "+,+,-,+" output-result.csv
 - Instructions:
 1. Navigate to `Topsis-Part3/`
 2. Install dependencies: `pip install -r requirements.txt`
-3. Run: `python app.py`
-4. Vercel Link: https://topsis-part3-pr32.vercel.app/
+3. Vercel Link: https://topsis-part3-pr32.vercel.app/
 
 
