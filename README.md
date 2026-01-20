@@ -34,7 +34,7 @@ python topsis.py data.csv "1,1,1,2" "+,+,-,+" output-result.csv
 - Result is emailed as CSV
 - Frontend is modern and responsive
 - Instructions:
-1. Navigate to `Topsis-Part3/`
+1. Navigate to `Topsis-part3/`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Vercel Link: https://topsis-part3-pr32.vercel.app/
 
