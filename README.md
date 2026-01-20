@@ -1,5 +1,5 @@
 # Topsis-Arshia-102303144
-Implementation of the TOPSIS multi-criteria decision-making method: includes CLI program, Python package, and Flask web service with email functionality.
+Implementation of the TOPSIS multi-criteria decision-making method: includes CLI program, Python package, and web service with email functionality.
 This repository contains all parts of the TOPSIS assignment:
 
 ## Part-I: Command Line TOPSIS Program
