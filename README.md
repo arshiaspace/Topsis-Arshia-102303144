@@ -23,7 +23,6 @@ python topsis.py data.csv "1,1,1,2" "+,+,-,+" output-result.csv
   pip install Topsis-Arshia-102303144==1.0.0
 
 ## Part-III: TOPSIS Web Service
-- Flask-based web application (`Topsis-Part3/app.py`)
 - User provides:
 - CSV/Excel file
 - Weights and impacts (comma-separated)
@@ -38,5 +37,6 @@ python topsis.py data.csv "1,1,1,2" "+,+,-,+" output-result.csv
 1. Navigate to `Topsis-Part3/`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run: `python app.py`
-4. Open browser: http://127.0.0.1:5000
+4. Vercel Link: https://topsis-part3-pr32.vercel.app/
+
 
